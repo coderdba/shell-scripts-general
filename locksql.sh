@@ -10,12 +10,14 @@
 #
 
 # Set environment here
-export ORACLE_SID=
-export ORACLE_BASE=
-export ORACLE_HOME=
-export LD_LIBRARY_PATH=
-export PATH=
-export LIBPATH=
+
+
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=/u01/app/oracle/product/11.2.0.4.RAC
+export ORACLE_SID=RACPROD011
+export PATH=/bin:/sbin:/etc:/usr/bin:/usr/sbin:/usr/local/bin:/usr/lib:$ORACLE_HOME/bin
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+export LIBPATH=$ORACLE_HOME/lib
 
 scriptpath=$0
 script=`basename $scriptpath`
