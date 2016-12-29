@@ -1,0 +1,11 @@
+# List running instance names
+ps -ef|grep pmon |grep -v grep |grep -v ASM | grep -v MGMTDB |cut -d_ -f3 | sort
+
+# List running 'db' names - cutting off last character from the instance name
+ps -ef|grep pmon |grep -v grep |grep -v ASM | grep -v MGMTDB |cut -d_ -f3 | sort | sed 's/.$//g' 
+
+# Replace last character of a string and append another string
+cat db.list | sed 's/.$//g' | sed 's/$/MYSTRING/g'
+
+
+
