@@ -113,7 +113,7 @@ url="https://pwvserver.company.com/PasswordVault/WebServices/PIMServices.svc/Acc
 password="x#y"
 
 # Call the API
-result=`curl -s -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization:$token" -X POST -d '{ "account" : { "safe":"SAFE-FOR-DBUSER1", "platformID":"OracleDB", "address":"'"$dbname"'", "accountName":"'"$accountName"'", "password":"'"$password"'", "username":"dbaopr", "properties": [ {"Key":"Port", 
+result=`curl -s -H "Accept: application/json" -H "Content-type: application/json" -H "Authorization:$token" -X POST -d '{ "account" : { "safe":"SAFE-FOR-DBUSER1", "platformID":"OracleDB", "address":"'"$dbname"'", "accountName":"'"$accountName"'", "password":"'"$password"'", "username":"DBUSER1", "properties": [ {"Key":"Port", 
 
 "Value":"1521"} ] } }'  $url`
 
